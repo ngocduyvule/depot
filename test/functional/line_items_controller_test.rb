@@ -57,4 +57,5 @@ class LineItemsControllerTest < ActionController::TestCase
 
     assert_redirected_to cart_path
   end
+
 end

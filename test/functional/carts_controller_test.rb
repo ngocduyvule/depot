@@ -47,4 +47,11 @@ class CartsControllerTest < ActionController::TestCase
 
     assert_redirected_to store_path
   end
+  
+  test "should hide empty cart" do
+    assert_select '#cart tr', count: 0 do
+      assert_select :hide, '#cart'
+    end
+  end
+  
 end
