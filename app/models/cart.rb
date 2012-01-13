@@ -19,4 +19,21 @@ class Cart < ActiveRecord::Base
 	def total_items
 	  line_items.sum(:quantity)
 	end
+	
+	def increase(line_item_id)
+	  current_item = line_items.find(line_item_id)
+	  current_item.quantity += 1
+	  current_item
+	end
+	
+	def decrease(line_item_id)
+    current_item = line_items.find(line_item_id)
+    if current_item.quantity > 1
+      current_item.quantity -= 1
+    else
+      current_item.destroy
+    end
+    current_item
+  end
+  
 end
