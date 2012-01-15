@@ -67,9 +67,13 @@ class OrdersController < ApplicationController
   # PUT /orders/1.json
   def update
     @order = Order.find(params[:id])
+    @order.attributes = params[:order]
+    
+    ship_date_changed = @order.ship_date_changed?
 
     respond_to do |format|
       if @order.update_attributes(params[:order])
+        OrderNotifier.shipped(@order).deliver if ship_date_changed
         format.html { redirect_to @order, notice: 'Order was successfully updated.' }
         format.json { head :ok }
       else
