@@ -1,6 +1,8 @@
 # encoding: UTF-8
 
 class LineItemsController < ApplicationController
+  protect_from_forgery
+  
   # GET /line_items
   # GET /line_items.json
   def index
