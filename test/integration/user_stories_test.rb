@@ -59,15 +59,5 @@ class UserStoriesTest < ActionDispatch::IntegrationTest
     assert_equal 'LE Ngoc-Duy-Vu <foenix.skies@gmail.com>', mail[:from].value
     assert_equal "Pragmatic Store Order Confirmation", mail.subject
   end
-  
-  test "should mail the admin when error occurs" do
-    get "/carts/wibble"
-    assert_response :redirect
-    assert_template "/"
-    
-    mail = ActionMailer::Base.deliveries.last
-    assert_equal ["foenix.skies@gmail.com"], mail.to
-    assert_equal "from@example.com", mail[:from].value
-    assert_equal "Pragmatic Store Error Incident", mail.subject
-  end
+
 end
