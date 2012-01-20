@@ -52,4 +52,10 @@ class ProductsControllerTest < ActionController::TestCase
 
     assert_redirected_to products_path
   end
+  
+  test "should require login" do
+    logout
+    get :index
+    assert_redirected_to login_path
+  end
 end
