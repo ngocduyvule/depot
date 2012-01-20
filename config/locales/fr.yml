@@ -1,0 +1,32 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+fr:
+  
+  layouts:
+    application:
+      title:                  "Librairie Pragmatique"
+      home:               "Accueil"
+      questions:        "Questions"
+      news:                "Actualités"
+      contact:            "Contact"
+      
+  store:
+    index:
+      title_html:         "Votre Catalogue Pragmatique"
+      add_html:          "Ajouter au panier"
+
+  carts:
+    cart:
+      title:                    "Votre Panier"
+      empty:                "Vider le panier"
+      checkout:            "Passer la commande"
+      
+  number:
+    currency:
+      format:
+        unit:                   "$US"
+        precision:          2
+        separator:          ","
+        delimiter:          "."
+        format:               "%n&nbsp;%u"
