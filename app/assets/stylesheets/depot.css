@@ -20,6 +20,11 @@
 	display: inline;
 }
 
+.locale {
+	float: right;
+	margin: -0.25em 0.1em;
+}
+
 /* Styles for the cart in the main page */
 
 #store .cart_title {

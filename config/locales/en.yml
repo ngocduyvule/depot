@@ -22,6 +22,17 @@ en:
       empty:                "Empty cart"
       checkout:            "Checkout"
       
+  orders:
+    new:
+      legend:               "Please Enter Your Details"
+    form:
+      name:                 "Name"
+      address_html:   "Address"
+      email:                  "E-mail"
+      payment_type: "Pay with"
+      pay_prompt_html: "Select a payment method"
+      submit:                "Place Order"
+      
   number:
     currency:
       format:
@@ -30,3 +41,5 @@ en:
         separator:          "."
         delimiter:          ","
         format:               "%u%n"
+        
+  thanks:                     "Thank you for your order"

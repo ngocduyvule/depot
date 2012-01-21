@@ -1,7 +1,7 @@
 # encoding: UTF-8
 
 class LineItemsController < ApplicationController
-  skip_before_filter :authorize, only: :create
+  skip_before_filter :authorize, only: [:create, :decrease, :increase, :destroy]
   
   # GET /line_items
   # GET /line_items.json

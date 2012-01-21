@@ -7,14 +7,15 @@ Depot::Application.routes.draw do
     delete 'logout' => :destroy
   end
   
+  resources :line_items do
+     put 'increase', on: :member
+     put 'decrease', on: :member
+  end
+  
   scope '(:locale)' do
       resources :users
       resources :payment_types
       resources :orders
-      resources :line_items do
-        put 'increase', on: :member
-        put 'decrease', on: :member
-      end
       resources :carts
       #get "store/index"
       resources :products do

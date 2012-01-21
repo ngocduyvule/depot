@@ -22,6 +22,17 @@ fr:
       empty:                "Vider le panier"
       checkout:            "Passer la commande"
       
+  orders:
+    new:
+      legend:               "Veuillez indiquer vos informations"
+    form:
+      name:                 "Nom"
+      address_html:   "Adresse"
+      email:                  "E-mail"
+      payment_type: "Mode de paiement"
+      pay_prompt_html: "Selectionner un mode de paiement"
+      submit:                "Valider la commande"
+      
   number:
     currency:
       format:
@@ -30,3 +41,26 @@ fr:
         separator:          ","
         delimiter:          "."
         format:               "%n&nbsp;%u"
+
+  activerecord:
+    models:
+      order:                    "commande"
+    attributes:
+      order:
+        address:              "Adresse"
+        name:                  "Nom"
+        email:                  "E-mail"
+        payment_type: "Mode de paiement"
+    errors:
+      messages:
+        inclusion:            "n'est pas inclus dans la liste"
+        blank:                  "ne peut pas être vide"
+  
+  errors:
+    template:
+      body:                     "Vous rencontrez des erreurs sur les points ci-dessous :"
+      header:
+        one:                      "Une erreur a empêché ce(tte) %{model} de s'enregistrer"
+        other:                   "%{count} ont empêché ce(tte) %{model} de s'enregistrer"
+
+  thanks:                       "Merci pour votre commande"
